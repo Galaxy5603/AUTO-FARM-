@@ -1,0 +1,40 @@
+
+
+prefix = {'k'};
+
+movesetup = {
+'TS Molotov','Anger Rush','Meteor Crash','Sweep Kick','Flash Strike','Strong Punch','God Slicer','',
+'Deadly Dance','Wolf Fang Fist','Neo Wolf Fang Fist','Mach Kick','Flash Skewer','','','',
+};
+
+lplr=game.Players.LocalPlayer;
+mouse=lplr:GetMouse();
+char=lplr.Character;
+
+spam=false;
+game:GetService("RunService").RenderStepped:connect(function()
+for i, v in next, char:GetChildren() do
+      if v.Name=="Action" or v.Name=="MoveStart" or v.Name=="Attacking" or v.Name=="Using" or v.Name=="hyper" or v.Name=="Hyper" or v.Name=="heavy" or v.Name=="KiBlasted" or v.Name=="Tele" or v.Name=="tele" or v.Name=="Look" or v.Name=="Slow" or v.Name=="zDASZzxc" then
+        v:Destroy()
+      end;
+   end;
+end);
+function movespamfunction()
+while spam do wait()
+   for i,v in pairs(lplr.Backpack:GetChildren()) do
+       if v.Name==movesetup[1] or v.Name==movesetup[2] or v.Name==movesetup[3] or v.Name==movesetup[4] or v.Name==movesetup[5] or v.Name==movesetup[6] or v.Name==movesetup[7] or v.Name==movesetup[8] then
+          v.Parent = lplr.Character wait() v:Activate() v:Deactivate()
+          v.Parent = lplr.Backpack
+          end;
+       end;
+   end;
+end;
+if spam then
+    movespamfunction()
+end;
+
+mouse.KeyDown:connect(function(key)
+   if key==prefix[1] then spam=not spam;
+      movespamfunction()
+   end;
+end)
