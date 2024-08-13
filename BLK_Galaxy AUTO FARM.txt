@@ -3,8 +3,8 @@ local npcs = {
     [2] = "Chi",
     [3] = "Kick",
     [4] = "Saibab",
-    [5] = "Saibam",
-    [6] = "",
+    [5] = "Android",
+    [6] = "Majin",
 }
 
 local function load(loadobj)
