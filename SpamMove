@@ -1,4 +1,7 @@
-
+game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "♥ PRESS K FOR SPAM MELEE♥ ";
+        Text = "BLK_Galaxy SPAM MOVE :))))";
+        })
 
 prefix = {'k'};
 
